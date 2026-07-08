@@ -4,6 +4,7 @@ body {
     background-color: rgb(214, 214, 214);
     display: flex;
     justify-content: center;
+    background-color: bisque;
 }
 
 ul {
@@ -44,14 +45,8 @@ a {
     cursor: pointer;
 }
 
-
-.light-l {
-    border-color: blue;
-    background-color: #f0f4ff;
-}
-
-.dark-l {
-    border-color: blue;
+.theme-option:has(.radio:checked) {
+    border: 2px solid blue;
     background-color: #f0f4ff;
 }
 
@@ -62,4 +57,86 @@ a {
     padding: 12px;
     margin-right: 10px;
     cursor: pointer;
+}
+
+.emeil h2{
+    color: rgb(181, 181, 181);
+}
+.emeil h3{
+    color: rgb(181, 181, 181);
+}
+
+.check_container{
+    display: flex;
+}
+
+.check_container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 30px;
+  width: 65px;
+  margin-left: 250px;
+  margin-top: 15px;
+  z-index: 100;
+}
+
+.emeil_check_front{ 
+    position: absolute;
+    width: 0px;
+    height: 0px;
+    background-color: white;
+    border: 16px solid grey;
+    margin-left: 270px;
+    margin-top: 15px;
+    border-right-width: 40px;
+    border-radius: 25px;
+    cursor: pointer;
+    transition-property:border-left-width border-right-width border-color;
+    transition-duration: 150ms;
+    transition-timing-function: ease;
+    
+}
+.check_.check_container:hover input ~ .emeil_check_front {
+  background-color: rgb(211, 211, 211);;
+  
+}
+
+.check_container input:checked ~ .emeil_check_front {
+  border-color: #2196F3;
+  border-left-width: 55px;
+  border-right-width: 3px;
+}
+
+.emeil_check_back{
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    background-color: white;
+    margin-left: 273px;
+    margin-top: 18px;
+    border-radius: 25px;
+    cursor: pointer;
+    transition-property:transform;
+    transition-duration: 250ms;
+    transition-timing-function: ease;
+    
+}
+.check_container input:checked ~ .emeil_check_back{
+    transform: translateX(25px);
+}
+button{
+    background-color: #2196F3;
+    color: white;
+    border-radius: 12px;
+    height: 40px;
+    width: 340px;
+    border: none;
+    justify-self: center;
+    cursor: pointer;
+    margin-top: 30px;
+
+}
+.butn{
+    justify-self: center;
 }
